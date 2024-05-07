@@ -1,0 +1,80 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply default font family and styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333; ;
+}
+
+/* Style header */
+header {
+    background-color: #bbb;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos al extremo derecho */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+
+nav {
+    background-color: #36454f;
+    display: flex;
+    flex: 1; /* Toma todo el espacio disponible */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin: 20px
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Cambia a flexbox para controlar mejor los elementos */
+    justify-content: flex-start; /* Alinea los elementos al extremo izquierdo */
+    margin-left: auto; /* Mueve los elementos al extremo derecho */
+}
+
+nav a {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+}
+
+.active {
+    color: yellow;
+}
+
+
+
+
+
+/* Main content */
+main {
+    max-width: 800px; /* Set your desired maximum width */
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Temple images */
+figure {
+    margin-bottom: 20px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners to images */
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
