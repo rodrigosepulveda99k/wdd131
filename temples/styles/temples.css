@@ -1,7 +1,5 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Apply default font family and styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -10,12 +8,11 @@ body {
     background-color: #333; ;
 }
 
-/* Style header */
 header {
     background-color: #bbb;
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos al extremo derecho */
-    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 30px #333;
@@ -24,16 +21,16 @@ header {
 nav {
     background-color: #36454f;
     display: flex;
-    flex: 1; /* Toma todo el espacio disponible */
-    align-items: center; /* Alinea verticalmente los elementos */
-    margin: 20px
+    flex: 1;
+    align-items: center;
+    margin: 20px;
 }
 
 nav ul {
     list-style-type: none;
-    display: flex; /* Cambia a flexbox para controlar mejor los elementos */
-    justify-content: flex-start; /* Alinea los elementos al extremo izquierdo */
-    margin-left: auto; /* Mueve los elementos al extremo derecho */
+    display: flex;
+    justify-content: flex-start;
+    margin-left: auto;
 }
 
 nav a {
@@ -41,40 +38,52 @@ nav a {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     text-decoration: underline double;
+    color: yellow;
 }
 
 .active {
     color: yellow;
 }
 
-
-
-
-
-/* Main content */
 main {
-    max-width: 800px; /* Set your desired maximum width */
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Temple images */
-figure {
+main h2 {
+    grid-area: heading;
+    font-size: 1.5rem;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-figure img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Add rounded corners to images */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
 
-figcaption {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
+figure {
+    margin: 0;
+    grid-area: auto; 
 }
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    padding: 10px;
+}
+

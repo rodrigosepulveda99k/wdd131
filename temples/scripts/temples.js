@@ -1,20 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get current year for copyright
     const currentYear = new Date().getFullYear();
-    const copyrightElement = document.querySelector('#copyright');
-    copyrightElement.textContent = currentYear;
+    document.querySelector('footer p').innerHTML = `&copy; ${currentYear} Rodrigo Sepulveda. All rights reserved.`;
 
-    // Get last modified date for last modified date output
-    const lastModifiedDate = new Date(document.lastModified);
-    const lastModifiedElement = document.querySelector('#lastModified');
-    lastModifiedElement.textContent = lastModifiedDate.toDateString();
-});
+    const lastModified = document.lastModified;
+    document.getElementById('lastModified').textContent = lastModified;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.querySelector('#menuButton');
-    const nav = document.querySelector('nav');
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
 
-    menuButton.addEventListener('click', function() {
-        nav.classList.toggle('open');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('show');
     });
 });
