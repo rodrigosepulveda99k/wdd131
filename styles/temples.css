@@ -15,6 +15,10 @@ header {
     background-color: #47282f;
 }
 
+.active {
+    color: yellow;
+}
+
 h1 {
     color: white;
     padding: 1rem;
@@ -74,6 +78,10 @@ h2 {
     max-width: 90%;
     display: block;
     margin: 1rem auto;
+}
+
+.text-img{
+    text-align: center;
 }
 
 .open a {
