@@ -3,66 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temples</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Rodrigo Sepulveda">
+    <meta name="author" content="Rodrigo Sepulveda">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+    <title>Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
-        <div class="hamburger">&#9776;</div>
+        <button id="menu" aria-label="menu"></button>
         <nav>
-            <ul>            
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul> 
+            <a href='#'class="active">Home</a>
+            <a href='#'>Old</a>
+            <a href='#'>New</a>
+            <a href='#'>Large</a>
+            <a href='#'>Small</a>
         </nav>
     </header>
     <main>
         <h2>Home</h2>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure class="image1">
-            <img src="images/temple.png" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-    </main>
+        <section id="temples">
+            <section id="temples">
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption >Temple 1 </figcaption>
+                </figure>
+                <figure class="image1">
+                    <img src="images/temple.png"class="img" alt="Temple 1">
+                    <figcaption >Temple 1 </figcaption>
+                </figure>
+            </section>
+        </main>
     <footer>
-        <p>&copy; 2024 Rodrigo Sepulveda. All rights reserved. Last updated: <span id="lastModified"></span></p>
-    </footer>    
-    <script src="scripts/temples.js" defer></script>
+        <p id="copyright">&#169; <span id="currentyear"></span>Rodrigo Sepulveda</p>
+        <p>This webpage was last modified on <span id="lastmodified"></span></p>
+    </footer>
 </body>
 </html>

@@ -1,88 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #333; ;
+}
+
+body {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 100px auto auto;
 }
 
 header {
-    background-color: #bbb;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
+    padding: 1rem;
+    background-color: #47282f;
+}
+
+h1 {
+    color: white;
+    padding: 1rem;
+    padding-left: 2rem;
+    font-family: "Roboto", serif;
+    font-weight: 400;
 }
 
 nav {
-    background-color: #36454f;
     display: flex;
-    flex: 1;
-    align-items: center;
-    margin: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: auto;
+    flex-direction: column;
 }
 
 nav a {
-    color: #fff;
-    text-align: center;
+    display: none;
     padding: 1rem;
+    background-color: #47282f;
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    text-decoration: underline double;
-    color: yellow;
-}
-
-.active {
-    color: yellow;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-main h2 {
-    grid-area: heading;
-    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 20px;
+    z-index: 2;
+    width: 45%;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #111111;
+    font-family: "Roboto", serif;
+}
+
+#temples {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.image1 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 20px;
 }
 
-figure {
-    margin: 0;
-    grid-area: auto; 
+.img {
+    max-width: 90%;
+    display: block;
+    margin: 1rem auto;
 }
 
-figure img {
-    width: 253.33px;
-    height: 281.34px;
-    object-fit: cover; /* Para mantener la relación de aspecto sin distorsionar */
+.open a {
+    display: block;
 }
 
-.hamburger {
-    display: none; 
-    cursor: pointer;
-    padding: 10px;
+a:hover {
+    background-color: #963232;
+    color: black;
+    font-weight: 700;
 }
 
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#menu::before {
+    content: "☰";
+    font-size: 40px;
+}
+
+#menu.open::before {
+    content: "x";
+}
+
+footer {
+    background-color: #47282f;
+    color: white;
+    padding: 1rem 1rem 3rem 1rem;
+    text-align: center;
+}

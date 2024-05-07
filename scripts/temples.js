@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const currentYear = new Date().getFullYear();
-    document.querySelector('footer p').innerHTML = `&copy; ${currentYear} Rodrigo Sepulveda. All rights reserved.`;
+document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 
-    const lastModified = document.lastModified;
-    document.getElementById('lastModified').textContent = lastModified;
+const moddate = new Date(document.lastModified);
+document.getElementById("lastmodified").innerHTML = new Date(document.lastModified);
 
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav ul');
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('nav');
 
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('show');
-    });
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
 });

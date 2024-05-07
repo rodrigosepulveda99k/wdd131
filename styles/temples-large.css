@@ -1,37 +1,44 @@
-@media (min-width: 740px) {
-    main {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-        grid-template-areas: "heading heading heading"
-                             "image1 image1 image1"
-                             "image1 image1 image1"
-                             "image1 image1 image1"; /* Define el diseño de la cuadrícula */
-    }
-}
-@media (max-width: 739px) {
-    .hamburger {
-        display: block;
-    }
-    nav ul {
+@media (min-width: 768px) {
+
+    #menu {
         display: none;
     }
 
-    nav ul.show {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background-color: #36454f;
-        z-index: 1;
+    header {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
     }
 
-    nav ul li {
-        padding: 10px;
-        border-bottom: 1px solid #fff;
+    h1 {
+        font-size: 2em;
     }
 
-    nav ul li:last-child {
-        border-bottom: none;
+    nav {
+        flex-direction: row;
+        background-color: transparent;
+        max-height: 80px;
+    }
+
+    nav a {
+        display: block;
+        flex: 1 1 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1.5rem;
+    }
+
+    .active::before {
+        padding-right: 0.5rem;
+        font-size: small;
+    }
+    
+    .active::after {
+        padding-left: 0.5rem;
+        font-size: small;
+    }
+
+    #temples {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
