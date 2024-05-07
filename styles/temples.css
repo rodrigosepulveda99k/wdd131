@@ -75,10 +75,9 @@ figure {
 }
 
 figure img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto; 
+    width: 253.33px;
+    height: 281.34px;
+    object-fit: cover; /* Para mantener la relación de aspecto sin distorsionar */
 }
 
 .hamburger {
