@@ -1,4 +1,3 @@
-// DOM elements for output
 const tempElement = document.querySelector("#temp_value");
 const conditionsElement = document.querySelector("#conditions_value");
 const windElement = document.querySelector("#wind_value");
@@ -10,7 +9,6 @@ let conditions = "Sunny";
 
 
 const windChill = (T, V) => {
-    // T is temperature in Celcius and V is wind speed in km/h
     if(T <= 10 && V > 4.8) {
         let windChillValue = 13.12 + 0.6215*T - 11.37 * V ** 0.16 + 0.3965 * T * V ** 0.16;
         return `${windChillValue.toFixed(2)}°C`
@@ -19,8 +17,6 @@ const windChill = (T, V) => {
     }
 }
 
-
-// Populate weather box:
 tempElement.textContent = `${temp}°C`;
 conditionsElement.textContent = `${conditions}`;
 windElement.textContent = `${windSpeed} km/h`;
