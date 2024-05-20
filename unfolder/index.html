@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Comidas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionales directamente en el head */
+        header {
+            background-color: #4a90e2; /* Celeste */
+            padding: 20px;
+            text-align: center;
+        }
+        body {
+            background-color: rgba(255, 255, 255, 0.8); /* Blanco opaco */
+        }
+        h1 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agenda de Comidas</h1>
+    </header>
+    <main>
+        <!-- Calendario -->
+        <div id="calendar"></div>
+        <!-- Formulario para agregar nota -->
+        <form id="noteForm">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="text" id="address" placeholder="Dirección" required>
+            <input type="text" id="comments" placeholder="Comentarios">
+            <input type="datetime-local" id="datetime" required>
+            <button type="submit">Agregar Nota</button>
+        </form>
+        <!-- Lista de notas -->
+        <ul id="notesList"></ul>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
