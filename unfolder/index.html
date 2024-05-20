@@ -1,43 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de Comidas</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
     <style>
         /* Estilos adicionales directamente en el head */
         header {
-            background-color: #4a90e2; /* Celeste */
+            background-color: #4a90e2;
+            /* Celeste */
             padding: 20px;
             text-align: center;
         }
+
         body {
-            background-color: rgba(255, 255, 255, 0.8); /* Blanco opaco */
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Blanco opaco */
+            margin: 0;
+            padding: 0;
         }
+
         h1 {
             font-weight: bold;
         }
+
+        /* Estilo para el contenedor del formulario */
+        #formulario-container {
+            background-color: #ccc;
+            /* Gris */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para el calendario */
+        #calendar {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Agenda de Comidas</h1>
     </header>
     <main>
+        <!-- Formulario para agregar nota -->
+        <div id="formulario-container" style="display: none;">
+            <form id="noteForm">
+                <input type="text" id="name" placeholder="Nombre" required>
+                <input type="text" id="address" placeholder="Dirección" required>
+                <label for="time">Hora de llegada:</label>
+                <input type="time" id="time" required>
+                <input type="datetime-local" id="datetime" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
         <!-- Calendario -->
         <div id="calendar"></div>
-        <!-- Formulario para agregar nota -->
-        <form id="noteForm">
-            <input type="text" id="name" placeholder="Nombre" required>
-            <input type="text" id="address" placeholder="Dirección" required>
-            <input type="text" id="comments" placeholder="Comentarios">
-            <input type="datetime-local" id="datetime" required>
-            <button type="submit">Agregar Nota</button>
-        </form>
-        <!-- Lista de notas -->
-        <ul id="notesList"></ul>
     </main>
     <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth', // Visualización inicial del calendario (mes)
+                editable: false, // No permitir edición
+                selectable: true, // Permitir selección de fechas
+                events: [] // Eventos iniciales (se cargarán dinámicamente)
+            });
+            calendar.render();
+
+            // Función para mostrar el formulario y agregar una nota
+            function agregarNota(info) {
+                // Establecer la fecha y hora actual como hora de inicio predeterminada
+                const fechaHoraActual = new Date();
+                const fecha = fechaHoraActual.toISOString().slice(0, 10);
+                const hora = fechaHoraActual.toTimeString().slice(0, 5);
+                const datetime = fecha + 'T' + hora;
+
+                document.getElementById('datetime').value = datetime;
+                document.getElementById('formulario-container').style.display = 'block';
+            }
+
+            // Acción al seleccionar una fecha en el calendario
+            calendar.on('select', function (info) {
+                agregarNota(info);
+            });
+
+            // Acción al enviar el formulario de notas
+            noteForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Evitar el envío del formulario por defecto
+
+                // Obtener los valores del formulario
+                const name = document.getElementById('name').value;
+                const address = document.getElementById('address').value;
+                const time = document.getElementById('time').value;
+                const datetime = document.getElementById('datetime').value;
+
+                // Crear un objeto de nota
+                const nota = {
+                    title: `${name} - ${address}`,
+                    start: datetime,
+                    end: datetime, // Misma hora de inicio y fin para simular una reunión
+                };
+
+                // Agregar la nota como un evento al calendario
+                calendar.addEvent(nota);
+
+                // Limpiar el formulario
+                noteForm.reset();
+                document.getElementById('formulario-container').style.display = 'none'; // Ocultar el formulario después de agregar la nota
+            });
+        });
+    </script>
 </body>
+
 </html>
