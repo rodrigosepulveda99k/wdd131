@@ -63,8 +63,8 @@ h2 {
 
 .temple-display {
     display: grid;
-    grid-template-columns: 1fr; /* 2 columns, main content wider */
-    grid-gap: 10px; /* gap between grid items */
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
     max-width: 1000px;
     margin: 0 auto;
 }
