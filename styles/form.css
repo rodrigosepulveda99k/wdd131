@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Roboto", serif;
+}
+
+header {
+    display: block;
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+p i {
+    font-weight: lighter;
+}
+
+.review-page {
+    display: block;
+}
+
+.review-page p {
+    font-weight: normal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.form {
+    width: 100%;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #93313157;
+    display: block;
+    max-width: 250px;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-field label i {
+    font-weight: lighter;
+        color: blue;
+}
+
+.form-field select {
+    width: 93%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-field input {
+    width: 90%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.formfield textarea {
+    width: 90%;
+}
+
+.checkbox-group {
+    display: block;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-weight: lighter;
+}
+
+.checkbox-group input[type="checkbox"] {
+    padding-left: 0px;
+    width: 10%;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: #000;
+}
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.stars > label {
+	color: rgb(185, 158, 3);
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	caret-color: #000; 
+}
+
+.stars > label:hover {
+	color: #000;
+}
+
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}
+
+
