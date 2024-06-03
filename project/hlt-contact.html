@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals - Rodrigo Sepulveda - Project - Healthy Living Tips">
+    <meta name="author" content="Rodrigo Sepulveda">
+    <title>Healthy Living Tips - Home Page</title>
+    <link rel="stylesheet" href="styles/hlt.css">
+    <link rel="stylesheet" href="styles/hlt-large.css">
+    <link rel="stylesheet" href="styles/hlt-home.css">
+    <link rel="stylesheet" href="styles/hlt-contact.css">
+    <script src="scripts/hlt-contact.js" defer></script>
+    <script src="scripts/hlt.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Healthy Living Tips</h1>
+        <button id="menu" aria-label="menu"></button>
+        <nav>
+            <a href="hlt-home.html">Home</a>
+            <a href="healthy-eating.html">Healthy Eating</a>
+            <a href="exercise.html">Exercise</a>
+            <a href="mental-wellness.html">Mental Wellness</a>
+            <a href="hlt-contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <form action="hlt.html" method="get">
+            <fieldset class="form-contact">
+                <h2>Message Us</h2>
+                <label class="input-title">Your Name: <input type="text" id="name-input" name="name" required></label>
+                <label class="input-title">Your Email: <input type="email" id="email-input" name="email"
+                        required></label>
+                <label class="input-title"> Your Message:
+                    <textarea id="textarea" name="textarea"></textarea></label>
+                <input type="submit" value="Send Message">
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <section id="site-info">
+            <p id="copyright">&#169; <span id="currentyear"></span>Rodrigo Sepulveda</p>
+            <p>This webpage was last modified on <span id="lastmodified"></span></p>
+        </section>
+        <section id="socials">
+            <a class="socials-link" href="https://www.instagram.com/rodrigo99k?igsh=MTNvcTRnam1qbDlnbA==" target="_blank"><img class="socials-icon"
+                    src="images/instagram.webp" width="100" height="100" alt="Instagram Icon"
+                    aria-label="Instagram Icon"></a>
+            <a class="socials-link" href="https://wa.me/2613726087?" target="_blank"><img class="socials-icon"
+                    src="images/wsa.webp" width="100" height="100" alt="WhatsApp Icon"
+                    aria-label="WhatsApp Icon"></a>
+            <a class="socials-link" href="rodrigosepulveda99k@gmail.com" target="_blank"><img class="socials-icon"
+                    src="images/gmail.webp" width="100" height="100" alt="Email Icon" aria-label="Email Icon"></a>
+        </section>
+    </footer>
+</body>
+
+</html>

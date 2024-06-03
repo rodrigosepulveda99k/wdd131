@@ -1,0 +1,31 @@
+.fruit-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+.fruit {
+    background-color: lightgray;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img {
+    width: 100%;
+    border: 6px solid black;
+}
+
+.fruit-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: -10px;
+    grid-gap: 10px;
+    padding-right: 10px;
+}

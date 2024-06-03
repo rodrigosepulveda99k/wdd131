@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: row;
+        background-color: transparent;
+        max-height: 80px;
+    }
+
+    nav a {
+        display: block;
+        flex: 1 1 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1.5rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}

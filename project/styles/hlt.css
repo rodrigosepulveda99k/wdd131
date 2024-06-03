@@ -1,0 +1,118 @@
+:root {
+    --font-heading: "Noto Sans", sans-serif;
+    --font-page: Arial, sans-serif;
+    --base-dark: #333;
+    --base-light: white;
+    --back: #588359;
+    --p: #41767feb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--base-light);
+    display: grid;
+    grid-template-rows: 100px auto auto;
+}
+
+header {
+    padding: 1rem;
+    background-color: var(--back);
+}
+
+h1 {
+    color: var(--base-light);
+    padding: 1rem;
+    padding-left: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    display: none;
+    padding: 1rem;
+    background-color: var(--back);
+    color: var(--base-light);
+    font-family: var(--base-light);
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    z-index: 2;
+    width: 45%;
+    margin-right: 0;
+    margin-left: auto;
+}
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--base-light);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#menu::before {
+    content: "☰";
+    font-size: 40px;
+}
+
+#menu.open::before {
+    content: "x";
+}
+
+h2 {
+    color: var(--font-page);
+    font-size: 2em;
+}
+
+p, ul { 
+    font-family: var(--font-page);
+    text-align: center;
+    padding: 8px;
+    margin: 25px;
+    background-color: var(--p);
+    border-radius: 10px;
+    color: var(--base-light);
+}
+
+footer p {
+    padding: 0.2rem 0 0 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--back);
+    color: var(--base-light);
+    font-family: var(--font-page);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1em;
+}
+
+.socials-icon {
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+}
+a:hover {
+    background-color: var(--back);
+    color: black;
+    font-weight: 700;
+    border-radius: 10px;
+}
+a.socials-link:hover {
+    background: none;
+}
+
+
