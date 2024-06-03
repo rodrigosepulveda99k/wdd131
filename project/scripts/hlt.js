@@ -8,18 +8,3 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
-
-page.addEventListener('click', () => {
-    hamButton.classList.remove('open');
-    navigation.classList.remove('open');
-});
-
-heading.addEventListener('click', () => {
-    hamButton.classList.remove('open');
-    navigation.classList.remove('open');
-});
-
-bottom.addEventListener('click', () => {
-    hamButton.classList.remove('open');
-    navigation.classList.remove('open');
-});
